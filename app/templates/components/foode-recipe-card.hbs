@@ -1,0 +1,44 @@
+{{yield}}
+
+<div class="card recipe-card">
+
+  <div class="card-image recipe-card" {{action 'onEditRecipe'}}>
+    <figure class="image">
+      <img src={{recipe.imageUrl}} alt="Image">
+    </figure>
+  </div>
+
+  <div class="card-content recipe-card-content">
+    <div class="content">
+      <div class='is-5'>Recipe {{recipe.name}}</div>
+      <div class='is-5'>
+
+        {{#each fullStars as |fullStar|}}
+          <span class="fa fa-star recipe-card-icon star-icon"></span>
+        {{/each}}
+
+        {{#each halfStars as |halfStar|}}
+          <span class="fa fa-star-half-full recipe-card-icon star-icon"></span>
+        {{/each}}
+
+        {{#each emptyStars as |halfStar|}}
+          <span class="fa fa-star-o recipe-card-icon star-icon"></span>
+        {{/each}}
+
+
+        {{recipe.reviews}} Reviews
+      </div>
+    </div>
+  </div>
+
+  <footer class="card-footer recipe-card-actions">
+    <a class="card-footer-item is-primary" {{action 'onAddRecipe'}}>
+      <span class="fa fa-plus-circle recipe-card-icon"></span>
+      Add to Recipes
+    </a>
+    <a class="card-footer-item is-primary" {{action 'onFavoriteRecipe'}}>
+      <span class="fa fa-heart recipe-card-icon"></span>
+      Favorite
+    </a>
+  </footer>
+</div>

@@ -1,0 +1,60 @@
+
+<nav class="nav has-shadow">
+  <div class="nav-left">
+    {{#link-to 'dashboard.home' class="nav-item is-tab is-hidden-mobile"}}
+      <div class="has-text-cetered">
+        <div class="fa fa-home"></div>
+        <div>Home</div>
+      </div>
+    {{/link-to}}
+    {{#link-to 'dashboard.recipes' class="nav-item is-tab is-hidden-mobile"}}
+      <div class="has-text-archive">
+        <div class="fa fa-home"></div>
+        <div>Recipes</div>
+      </div>
+    {{/link-to}}
+    {{#link-to 'dashboard.ingredients' class="nav-item is-tab is-hidden-mobile"}}
+      <div class="has-text-cetered">
+        <div class="fa fa-file-o"></div>
+        <div>Groceries</div>
+      </div>
+    {{/link-to}}
+    {{#link-to 'dashboard.meal-planner' class="nav-item is-tab is-hidden-mobile"}}
+      <div class="has-text-cetered">
+        <div class="fa fa-calendar"></div>
+        <div>Meal Planner</div>
+      </div>
+    {{/link-to}}
+    {{#link-to 'dashboard.shop' class="nav-item is-tab is-hidden-mobile"}}
+      <div class="has-text-cetered">
+        <div class="fa fa-shopping-basket"></div>
+        <div>Shop</div>
+      </div>
+    {{/link-to}}
+  </div>
+
+  <span class="nav-toggle">
+  </span>
+
+  <div class="nav-right nav-menu">
+    {{#link-to 'dashboard.recipes' class="nav-item is-tab is-hidden-tablet"}}Recipes{{/link-to}}
+    {{#link-to 'dashboard.ingredients' class="nav-item is-tab is-hidden-tablet"}}Groceries{{/link-to}}
+    {{#link-to 'dashboard.meal-planner' class="nav-item is-tab is-hidden-tablet"}}MealPlanner{{/link-to}}
+    {{#link-to 'dashboard.shop' class="nav-item is-tab is-hidden-tablet"}}Shop{{/link-to}}
+
+    {{#link-to 'dashboard.profile' class="nav-item is-tab"}}
+      <div class="has-text-cetered">
+        <div class="fa fa-user-circle-o"></div>
+        <div>Profile</div>
+      </div>
+    {{/link-to}}
+    {{#link-to 'login' class="nav-item is-tab"}}
+      <div class="has-text-cetered">
+        <div class="fa fa-home"></div>
+        <div>Log Out</div>
+      </div>
+    {{/link-to}}
+  </div>
+</nav>
+
+{{outlet}}

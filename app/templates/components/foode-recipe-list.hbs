@@ -1,0 +1,14 @@
+{{yield}}
+
+
+<div class="columns">
+
+  {{#each recipes as |recipe|}}
+
+    <div class="column">
+      {{foode-recipe-card recipe=recipe onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+    </div>
+
+  {{/each}}
+
+</div>

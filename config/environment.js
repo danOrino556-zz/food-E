@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-quickstart',
+    modulePrefix: 'foodE',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

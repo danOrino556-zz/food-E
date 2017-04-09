@@ -1,0 +1,46 @@
+
+<section class="hero is-primary is-fullheight">
+
+  <!-- Hero header: will stick at the top -->
+  <div class="hero-head">
+
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="field">
+        <p class="control has-icon">
+          <input class="input" type="email" placeholder="Email">
+          <span class="icon is-small">
+            <i class="fa fa-envelope"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control has-icon">
+          <input class="input" type="password" placeholder="Password">
+          <span class="icon is-small">
+            <i class="fa fa-lock"></i>
+          </span>
+        </p>
+      </div>
+      <div class="field">
+        <p class="control">
+          <button class="button is-success" {{action 'onLogin'}}>
+            Login
+          </button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+
+  </div>
+
+</section>
+
+{{outlet}}
