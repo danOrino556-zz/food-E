@@ -7,14 +7,19 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+
   this.route('login');
+
   this.route('dashboard', function() {
+
     this.route('home', function() {
-      this.route('edit-recipe', { path: '/recipe/:recipe_id' });
+      this.route('edit-recipe', { path: '/edit/:recipe_id' });
     });
+
     this.route('recipes', function() {
-      this.route('edit-recipe', { path: '/recipe/:recipe_id' });
+      this.route('edit-recipe', { path: '/edit/:recipe_id' });
     });
+
     this.route('ingredients');
     this.route('profile');
     this.route('meal-planner');

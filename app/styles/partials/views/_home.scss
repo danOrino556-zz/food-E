@@ -1,0 +1,25 @@
+.app-container{
+  padding : 2% 2%;
+}
+
+.meal-category-column{
+  padding-top : 0px;
+  padding-bottom : 0px;
+  margin-right : 15px;
+}
+
+.meal-category{
+  height : 169px;
+  width : 169px;
+  text-align: center;
+
+  h4{
+    margin-top : 40px;
+  }
+}
+
+.see-more-link{
+  margin-top : 10px;
+  color : $purple-color;
+  cursor : pointer;
+}

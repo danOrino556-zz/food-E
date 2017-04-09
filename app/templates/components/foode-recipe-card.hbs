@@ -1,15 +1,24 @@
-{{yield}}
 
 <div class="card recipe-card">
 
-  <div class="card-image recipe-card" {{action 'onEditRecipe'}}>
-    <figure class="image">
+  {{#if recipe.favorite}}
+
+    <div class="favorite-icon">
+      <span class="fa fa-heart recipe-card-icon"></span>
+    </div>
+
+  {{/if}}
+
+
+  <div class="card-image recipe-card-image" {{action 'onEditRecipe'}}>
+    <figure class="image image is-16by9">
       <img src={{recipe.imageUrl}} alt="Image">
     </figure>
   </div>
 
   <div class="card-content recipe-card-content">
     <div class="content">
+
       <div class='is-5'>Recipe {{recipe.name}}</div>
       <div class='is-5'>
 

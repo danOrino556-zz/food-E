@@ -12,7 +12,6 @@ export default Ember.Route.extend({
   model : function(){
 
     const recipeSvc = this.get('recipeSvc');
-    const ingredientSvc = this.get('ingredientSvc');
 
     return recipeSvc.getRecipes().then(
       (recipes)=>{
@@ -30,32 +29,12 @@ export default Ember.Route.extend({
 
   actions : {
 
-
-    /**
-     * @method onRecipe
-     * @param  {Object} recipe
-     */
-    onRecipe(recipe){
-      this.transitionTo('dashboard.home.recipes');
-    },
-
-
-    /**
-     * @method onIngredient
-     * @param  {Object} ingredient
-     */
-    onIngredient(ingredient){
-      this.transitionTo('dashboard.home.ingredients');
-    },
-
-
     /**
      * @method onEditRecipe
      * @param  {Object} recipe
      */
     onEditRecipe(recipe){
-      console.log(recipe);
-      //this.transitionTo('dashboard.home.edit-recipe', recipe.get('id'));
+      this.transitionTo('dashboard.home.edit-recipe', recipe.get('id'));
     },
 
 

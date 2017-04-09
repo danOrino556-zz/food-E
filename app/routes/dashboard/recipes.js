@@ -30,7 +30,28 @@ export default Ember.Route.extend({
      * @param  {Object} recipe
      */
     onEditRecipe(recipe){
-      this.transitionTo('dashboard.recipes.edit-recipe', recipe.get('id'));
+      //this.transitionTo('dashboard.recipes.edit-recipe', recipe.get('id'));
+    },
+
+
+    /**
+     * @method onAddRecipe
+     * @param  {Object} recipe
+     */
+    onAddRecipe(recipe){
+
+      const recipeSvc = this.get('recipeSvc');
+      recipeSvc.addRecipe(recipe);
+    },
+
+
+    /**
+     * @method onFavortieRecipe
+     * @param  {Object} recipe
+     */
+    onFavoriteRecipe(recipe){
+      const recipeSvc = this.get('recipeSvc');
+      recipeSvc.favoriteRecipe(recipe);
     },
   }
 });

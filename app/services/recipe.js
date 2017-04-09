@@ -30,23 +30,32 @@ export default Ember.Service.extend({
       //
       const store = this.get('store');
 
+      const records = [];
 
-      resolve([
-        store.createRecord('recipe', {
-          name : 1
-        }),
-        store.createRecord('recipe', {
-          name : 2
-        }),
-        store.createRecord('recipe', {
-          name : 3
-        }),
-        store.createRecord('recipe', {
-          name : 4
-        }),
-      ]);
+      for(let i = 0; i<5; i++){
+        records.pushObject(
+          store.createRecord('recipe', {
+            name : i + 1,
+            id : this.createGUID()
+          })
+        )
+      }
 
+      resolve(records);
     });
+  },
+
+
+  createGUID : function() {
+
+    function s4() {
+      return Math.floor((1 + Math.random()) * 0x10000)
+        .toString(16)
+        .substring(1);
+    }
+
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+      s4() + '-' + s4() + s4() + s4();
   },
 
 
@@ -96,6 +105,8 @@ export default Ember.Service.extend({
     //     });
     // });
     //
+    //
+    recipe.set('favorite', true);
     console.log(recipe);
   },
 
