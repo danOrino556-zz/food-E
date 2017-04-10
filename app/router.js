@@ -14,10 +14,13 @@ Router.map(function() {
 
     this.route('home', function() {
       this.route('edit-recipe', { path: '/edit/:recipe_id' });
+      this.route('landing');
     });
 
     this.route('recipes', function() {
       this.route('edit-recipe', { path: '/edit/:recipe_id' });
+      this.route('filter', { path: '/filter/:filter_type' });
+      this.route('landing',  { path: '/landing/' });
     });
 
     this.route('ingredients');

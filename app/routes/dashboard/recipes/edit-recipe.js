@@ -10,7 +10,11 @@ export default Ember.Route.extend({
   model : function(params){
 
     const recipeId = params.recipe_id;
-    return this.store.peekRecord('recipe', recipeId);
+    const recipes = this.store.peekAll('recipe');
+    const record = recipes.findBy('id', recipeId);
+    return {
+      recipe : record
+    };
   },
 
 
@@ -21,7 +25,7 @@ export default Ember.Route.extend({
      * @method onBack
      */
     onBack(){
-      this.transitionTo('dashboard.recipes');
+      this.transitionTo('dashboard.recipes.landing');
     }
   }
 });

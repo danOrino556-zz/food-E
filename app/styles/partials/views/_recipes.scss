@@ -35,6 +35,7 @@
 
 .recipe-card-image{
   background-color : #555555;
+  //background-image:-webkit-linear-gradient(15deg, #000 80%,rgba(255, 255, 255, 0.3) 80%);
 
 }
 
@@ -43,6 +44,10 @@
   color : #FFF;
   z-index : 50;
   bottom : 0px;
+  padding : 15px;
+  width : 100%;
+  //background-image: linear-gradient(red, orange);
+  //opacity : 0.6;
 }
 
 .recipe-card-actions{
@@ -50,6 +55,7 @@
   position : absolute;
   bottom : 0px;
   background-color: $purple-color;
+  margin-top : 0;
 
   a{
     color : #FFF !important;
@@ -66,4 +72,8 @@
 
 .recipe-row{
   margin-bottom : 25px;
+}
+
+.recipe-menu-column{
+  padding-right : 100px;
 }

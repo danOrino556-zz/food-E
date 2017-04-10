@@ -1,24 +1,50 @@
 
+<div class="columns">
 
-<div class="recipe-row">
-  {{foode-recipe-header title='Recently Added Recipes'}}
-  {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
-</div>
+  <div class="column recipe-menu-column">
 
+    <aside class="menu">
 
-<div class="recipe-row">
-  {{foode-recipe-header title='Recent Favorites'}}
-  {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
-</div>
-
-
-<div class="recipe-row">
-  {{foode-recipe-header title='Top Rated Recipes'}}
-  {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
-</div>
+      <p class="menu-label">
+        Your Recipes
+      </p>
+      <ul class="menu-list">
+        <li><a>Current</a></li>
+        <li><a>Favorites</a></li>
+        <li><a>Previous</a></li>
+      </ul>
 
 
-<div class="recipe-row">
-  {{foode-recipe-header title='Suggested Recipes'}}
-  {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+      <p class="menu-label">
+        Categories
+      </p>
+      <ul class="menu-list">
+        <li><a>Popular</a></li>
+        <li><a>Breakfast</a></li>
+        <li><a>Lunch</a></li>
+        <li><a>Dinner</a></li>
+        <li><a>Italian</a></li>
+        <li><a>Vegan</a></li>
+        <li><a>Mexican</a></li>
+        <li><a>Thai</a></li>
+        <li><a>Chinese</a></li>
+        <li><a>Greek</a></li>
+        <li><a>Japanese</a></li>
+        <li><a>Mongolian</a></li>
+        <li><a>Tex-Mex</a></li>
+        <li><a>Meeeaaaat</a></li>
+        <li><a>Fruitarian</a></li>
+        <li><a>Ramen</a></li>
+      </ul>
+
+
+    </aside>
+
+  </div>
+
+  <div class="column">
+
+    {{liquid-outlet}}
+
+  </div>
 </div>

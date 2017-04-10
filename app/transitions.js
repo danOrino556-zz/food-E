@@ -95,4 +95,26 @@ export default function(){
     this.use('toUp')
   );
 
+
+  this.transition(
+    this.toRoute('dashboard.home.edit-recipe'),
+    this.use('toDown')
+  );
+
+  this.transition(
+    this.fromRoute('dashboard.home.edit-recipe'),
+    this.use('toUp')
+  );
+
+
+  this.transition(
+    this.toRoute('dashboard.recipes.edit-recipe'),
+    this.use('toDown')
+  );
+
+  this.transition(
+    this.fromRoute('dashboard.recipes.edit-recipe'),
+    this.use('toUp')
+  );
+
 }

@@ -11,14 +11,13 @@
 
 
   <div class="card-image recipe-card-image" {{action 'onEditRecipe'}}>
-    <figure class="image image is-16by9">
+    <figure class="image image is-2by1">
       <img src={{recipe.imageUrl}} alt="Image">
     </figure>
   </div>
 
   <div class="card-content recipe-card-content">
     <div class="content">
-
       <div class='is-5'>Recipe {{recipe.name}}</div>
       <div class='is-5'>
 
@@ -33,7 +32,6 @@
         {{#each emptyStars as |halfStar|}}
           <span class="fa fa-star-o recipe-card-icon star-icon"></span>
         {{/each}}
-
 
         {{recipe.reviews}} Reviews
       </div>

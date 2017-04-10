@@ -1,0 +1,106 @@
+<div class="">
+
+  {{foode-recipe-header title='Whats Cooking'}}
+
+  <div class="columns">
+
+    <div class="meal-category-column">
+      <div class="notification is-primary meal-category">
+        <h4 class='title is-4'>
+          <div class="fa fa-coffee"></div>
+        </h4>
+        Breakfast
+      </div>
+    </div>
+
+    {{foode-recipe-list recipes=model.breakfastRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+
+  </div>
+
+
+  <div class="columns" style='margin-top : 20px;'>
+
+    <div class="meal-category-column">
+      <div class="notification is-info meal-category">
+        <h4 class='title is-4'>
+          <div class="fa fa-coffee"></div>
+        </h4>
+        Lunch
+      </div>
+    </div>
+
+    {{foode-recipe-list recipes=model.lunchRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+
+  </div>
+
+
+  <div class="recipe-header-row has-text-right">
+    {{#link-to 'dashboard.recipes.filter' 'lunch'}}
+      <h5 class='title is-5 see-more-link'>
+        See More....
+      </h5>
+    {{/link-to}}
+  </div>
+</div>
+
+
+
+<!--Recipe Lists-->
+
+<div class="">
+  {{foode-recipe-header title='Recently Saved'}}
+  {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+
+  <div class="recipe-header-row has-text-right">
+    {{#link-to 'dashboard.recipes'}}
+      <h5 class='title is-5 see-more-link'>
+        See More....
+      </h5>
+    {{/link-to}}
+  </div>
+</div>
+
+
+<div class="">
+  {{foode-recipe-header title='Recently Favorited'}}
+  {{foode-recipe-list recipes=model.favoriteRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+
+  <div class="recipe-header-row has-text-right">
+    {{#link-to 'dashboard.recipes'}}
+      <h5 class='title is-5 see-more-link'>
+        See More....
+      </h5>
+    {{/link-to}}
+  </div>
+</div>
+
+
+<div class="">
+  {{foode-recipe-header title='Top Rated'}}
+  {{foode-recipe-list recipes=model.topRatedRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+
+  <div class="recipe-header-row has-text-right">
+    {{#link-to 'dashboard.recipes'}}
+      <h5 class='title is-5 see-more-link'>
+        See More....
+      </h5>
+    {{/link-to}}
+  </div>
+
+</div>
+
+
+<div class="">
+
+  {{foode-recipe-header title='Suggested Recipes'}}
+  {{foode-recipe-list recipes=model.suggestedRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+
+  <div class="recipe-header-row has-text-right">
+    {{#link-to 'dashboard.recipes'}}
+      <h5 class='title is-5 see-more-link'>
+        See More....
+      </h5>
+    {{/link-to}}
+  </div>
+
+</div>

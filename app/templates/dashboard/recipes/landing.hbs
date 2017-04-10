@@ -1,0 +1,22 @@
+<div class="recipe-row">
+  {{foode-recipe-header title='Recently Added Recipes'}}
+  {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+</div>
+
+
+<div class="recipe-row">
+  {{foode-recipe-header title='Recent Favorites'}}
+  {{foode-recipe-list recipes=model.favoriteRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+</div>
+
+
+<div class="recipe-row">
+  {{foode-recipe-header title='Top Rated Recipes'}}
+  {{foode-recipe-list recipes=model.topRatedRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+</div>
+
+
+<div class="recipe-row">
+  {{foode-recipe-header title='Suggested Recipes'}}
+  {{foode-recipe-list recipes=model.suggestedRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
+</div>

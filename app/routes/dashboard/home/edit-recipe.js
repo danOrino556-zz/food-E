@@ -25,7 +25,7 @@ export default Ember.Route.extend({
      * @method onBack
      */
     onBack(){
-      this.transitionTo('dashboard.home');
+      this.transitionTo('dashboard.home.landing');
     }
   }
 });
