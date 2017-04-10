@@ -23,7 +23,7 @@ export default Ember.Route.extend({
      * @param {String} password
      */
     onLogin(username, password){
-      this.transitionTo('dashboard.home');
+      this.transitionTo('dashboard.home.landing');
     }
   }
 });

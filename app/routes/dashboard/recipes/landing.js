@@ -40,6 +40,15 @@ export default Ember.Route.extend({
 
 
     /**
+     * @method onFilterRecipes
+     * @param  {Object} recipe
+     */
+    onFilterRecipes(filterParam){
+      this.transitionTo('dashboard.recipes.filter', filterParam);
+    },
+
+
+    /**
      * @method onEditRecipe
      * @param  {Object} recipe
      */

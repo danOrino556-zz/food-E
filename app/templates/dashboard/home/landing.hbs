@@ -52,7 +52,7 @@
   {{foode-recipe-list recipes=model.recentRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
 
   <div class="recipe-header-row has-text-right">
-    {{#link-to 'dashboard.recipes'}}
+    {{#link-to 'dashboard.recipes.filter' 'recent'}}
       <h5 class='title is-5 see-more-link'>
         See More....
       </h5>
@@ -66,7 +66,7 @@
   {{foode-recipe-list recipes=model.favoriteRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
 
   <div class="recipe-header-row has-text-right">
-    {{#link-to 'dashboard.recipes'}}
+    {{#link-to 'dashboard.recipes.filter' 'favorites'}}
       <h5 class='title is-5 see-more-link'>
         See More....
       </h5>
@@ -80,7 +80,7 @@
   {{foode-recipe-list recipes=model.topRatedRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
 
   <div class="recipe-header-row has-text-right">
-    {{#link-to 'dashboard.recipes'}}
+    {{#link-to 'dashboard.recipes.filter' 'topRated'}}
       <h5 class='title is-5 see-more-link'>
         See More....
       </h5>
@@ -96,7 +96,7 @@
   {{foode-recipe-list recipes=model.suggestedRecipes onEditRecipe='onEditRecipe' onAddRecipe='onAddRecipe' onFavoriteRecipe='onFavoriteRecipe'}}
 
   <div class="recipe-header-row has-text-right">
-    {{#link-to 'dashboard.recipes'}}
+    {{#link-to 'dashboard.recipes.filter' 'suggested'}}
       <h5 class='title is-5 see-more-link'>
         See More....
       </h5>
