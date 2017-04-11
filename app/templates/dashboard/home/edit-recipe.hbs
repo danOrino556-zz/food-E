@@ -1,9 +1,20 @@
 
 
-<div {{action 'onBack'}}>
-  Back
-</div>
+<!--Top Level actions (Back)-->
+{{foode-recipe-info-navbar recipe=model.recipe
+                           onBack='onBack'
+                           onFavorite='onFavorite'
+                           onAdd='onAdd'
+                           onOptions='onOptions'}}
 
-<h5>Edit Recipe</h5>
+<hr>
 
-<h1>{{model.recipe.name}}</h1>
+
+<!--Recipe Fields-->
+
+{{foode-recipe-info-header recipe=model.recipe}}
+
+
+<hr>
+
+{{foode-recipe-info-body recipe=model.recipe}}

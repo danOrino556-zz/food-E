@@ -48,12 +48,12 @@
         <div>Profile</div>
       </div>
     {{/link-to}}
-    {{#link-to 'login' class="nav-item is-tab"}}
+    <a class="nav-item is-tab" {{action 'logout'}}>
       <div class="has-text-cetered">
         <div class="fa fa-home"></div>
         <div>Log Out</div>
       </div>
-    {{/link-to}}
+    </a>
   </div>
 </nav>
 

@@ -1,34 +1,21 @@
 
+<section class="hero is-dark is-medium">
+  <div class="hero-body">
+    <div class="container">
 
-<h3 class='title is-3'>
-  Recent Ingredients
-</h3>
+      <h1 class="title">
+        Groceries
+      </h1>
 
-<div class="columns">
+      <h2 class="subtitle">
+        Coming Soon <span class='fa fa-smile-o' style='margin-left : 5px;'></span>
+      </h2>
 
-  <hr>
-
-  {{#each model.recentIngredients as |recentIngredient|}}
-
-    <div class="column">
-      <div class="card">
-
-        <div class="card-image">
-          <figure class="image">
-            <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Image">
-          </figure>
-        </div>
-
-        <div class="card-content">
-          <div class="content">
-            Ingredient {{recentIngredient}}
-          </div>
-        </div>
+      <div class="">
+        <figure class="image image is-4by3">
+          <img src='http://cdn.collider.com/wp-content/uploads/2016/02/john-goodman-jeff-bridges-the-big-lebowski.jpg' alt="Image">
+        </figure>
       </div>
     </div>
-
-  {{/each}}
-
-</div>
-
-{{outlet}}
+  </div>
+</section>

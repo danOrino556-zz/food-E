@@ -61,75 +61,82 @@ export default Ember.Service.extend({
 
   addRecipe : function(recipe){
 
-    // return new Ember.RSVP.Promise((resolve, reject) => {
-    //
-    //   Ember.$.ajax({
-    //     url: bobsUrl,
-    //     type: "POST",
-    //     dataType: "json",
-    //     contentType: "application/json",
-    //     data: JSON.stringify(recipe),
-    //   }).then(
-    //
-    //     (data) => {
-    //       resolve();
-    //     },
-    //
-    //     (xhr) => {
-    //       reject(xhr);
-    //     });
-    // });
-    //
-    console.log(recipe);
+    return new Ember.RSVP.Promise((resolve, reject) => {
+
+      // Ember.$.ajax({
+      //   url: bobsUrl,
+      //   type: "POST",
+      //   dataType: "json",
+      //   contentType: "application/json",
+      //   data: JSON.stringify(recipe),
+      // }).then(
+      //
+      //   (data) => {
+      //     resolve();
+      //   },
+      //
+      //   (xhr) => {
+      //     reject(xhr);
+      //   });
+      //
+      console.log('Add recipe service hook');
+      console.log(recipe);
+      resolve(recipe);
+    });
   },
 
 
   favoriteRecipe : function(recipe){
 
-    // return new Ember.RSVP.Promise((resolve, reject) => {
-    //
-    //   Ember.$.ajax({
-    //     url: bobsUrl,
-    //     type: "POST",
-    //     dataType: "json",
-    //     contentType: "application/json",
-    //     data: JSON.stringify(recipe),
-    //   }).then(
-    //
-    //     (data) => {
-    //       resolve();
-    //     },
-    //
-    //     (xhr) => {
-    //       reject(xhr);
-    //     });
-    // });
-    //
-    //
-    recipe.set('favorite', true);
-    console.log(recipe);
+    return new Ember.RSVP.Promise((resolve, reject) => {
+
+      // Ember.$.ajax({
+      //   url: bobsUrl,
+      //   type: "POST",
+      //   dataType: "json",
+      //   contentType: "application/json",
+      //   data: JSON.stringify(recipe),
+      // }).then(
+      //
+      //   (data) => {
+      //     resolve();
+      //   },
+      //
+      //   (xhr) => {
+      //     reject(xhr);
+      //   });
+
+      recipe.set('favorite', true);
+      console.log('Favorite recipe service hook');
+      console.log(recipe);
+      resolve(recipe);
+    });
   },
 
 
-  editRecipe : function(recipe){
+  saveRecipe : function(recipe){
 
     return new Ember.RSVP.Promise((resolve, reject) => {
 
-      Ember.$.ajax({
-        url: bobsUrl,
-        type: "POST",
-        dataType: "json",
-        contentType: "application/json",
-        data: JSON.stringify(recipe),
-      }).then(
-
-        (data) => {
-          resolve();
-        },
-
-        (xhr) => {
-          reject(xhr);
-        });
+      // Ember.$.ajax({
+      //   url: bobsUrl,
+      //   type: "POST",
+      //   dataType: "json",
+      //   contentType: "application/json",
+      //   data: JSON.stringify(recipe),
+      // }).then(
+      //
+      //   (data) => {
+      //     resolve();
+      //   },
+      //
+      //   (xhr) => {
+      //     reject(xhr);
+      //   });
+      //
+      console.log('Save recipe service hook');
+      console.log(recipe);
+      resolve(recipe);
     });
   },
 });
