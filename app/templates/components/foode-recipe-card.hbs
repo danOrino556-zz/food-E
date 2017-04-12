@@ -34,8 +34,15 @@
       Add to Recipes
     </a>
     <a class="card-footer-item is-primary" {{action 'onFavoriteRecipe'}}>
-      <span class="fa fa-heart recipe-label-icon"></span>
-      Favorite
+
+      <span class="fa {{if recipe.favorite 'fa-heart-o' 'fa-heart'}} recipe-label-icon"></span>
+
+      {{#if recipe.favorite}}
+        Unfavorite
+      {{else}}
+        Favorite
+      {{/if}}
+
     </a>
   </footer>
 </div>

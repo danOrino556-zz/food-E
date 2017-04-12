@@ -4,6 +4,7 @@ export default Ember.Route.extend({
 
 
   recipeSvc : Ember.inject.service('recipe'),
+  notificationSvc : Ember.inject.service('notification'),
 
 
   /**
@@ -22,7 +23,7 @@ export default Ember.Route.extend({
       recipeSvc.getRecipes()
     ];
 
-
+    //Each of these arrays represents once category of recipes
     return Ember.RSVP.allSettled(recipePromises).then(
 
       (promises)=>{
@@ -57,7 +58,16 @@ export default Ember.Route.extend({
     onAddRecipe(recipe){
 
       const recipeSvc = this.get('recipeSvc');
-      recipeSvc.addRecipe(recipe);
+      const notificationSvc = this.get('notificationSvc')
+
+      recipeSvc.addRecipe(recipe).then(
+        ()=>{
+          notificationSvc.success(recipe.get('name') + ' has been added to your recipe list');
+        },
+        ()=>{
+          notificationSvc.success('There was a problem adding ' + recipe.get('name') + ' to your recipe list');
+        }
+      );
     },
 
 

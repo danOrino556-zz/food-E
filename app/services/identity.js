@@ -3,13 +3,16 @@ import Ember from 'ember';
 export default Ember.Service.extend({
 
 
+  store : Ember.inject.service('store'),
+
+
   /**
    * @method login
    * @param {String} usename
    * @param {String} password
    */
   login : function(username, password){
-    
+
     return new Ember.RSVP.Promise((resolve, reject) => {
 
       // Ember.$.ajax({
@@ -33,7 +36,10 @@ export default Ember.Service.extend({
       //
       //
 
-      resolve(true);
+      const store = this.get('store');
+      const userRecord = store.createRecord('user');
+
+      resolve(userRecord);
     });
   },
 
@@ -60,8 +66,8 @@ export default Ember.Service.extend({
       //   (xhr) => {
       //     reject(xhr);
       //   });
-      console.log('Logged Out');
 
+      console.log('Logout Service Function Hit');
       resolve(true);
     });
   }

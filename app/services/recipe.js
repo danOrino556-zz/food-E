@@ -2,8 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Service.extend({
 
+
   store : Ember.inject.service('store'),
 
+
+  /**
+   * @method getRecipes
+   */
   getRecipes : function(){
 
     return new Ember.RSVP.Promise((resolve, reject) => {
@@ -23,19 +28,14 @@ export default Ember.Service.extend({
       //   (xhr) => {
       //     reject(xhr);
       //   });
-      //
-      //
-      //
-      //
-      //
+
       const store = this.get('store');
 
       const records = [];
 
-      for(let i = 0; i<5; i++){
+      for(let i = 0; i<15; i++){
         records.pushObject(
           store.createRecord('recipe', {
-            name : i + 1,
             id : this.createGUID()
           })
         )
@@ -46,6 +46,10 @@ export default Ember.Service.extend({
   },
 
 
+  /**
+   * POSSIBLE TEMP METHOD
+   * @method getRecipes
+   */
   createGUID : function() {
 
     function s4() {
@@ -59,6 +63,10 @@ export default Ember.Service.extend({
   },
 
 
+  /**
+   * @method addRecipe
+   * @param {Object} recipe
+   */
   addRecipe : function(recipe){
 
     return new Ember.RSVP.Promise((resolve, reject) => {
@@ -78,7 +86,7 @@ export default Ember.Service.extend({
       //   (xhr) => {
       //     reject(xhr);
       //   });
-      //
+
       console.log('Add recipe service hook');
       console.log(recipe);
       resolve(recipe);
@@ -86,6 +94,10 @@ export default Ember.Service.extend({
   },
 
 
+  /**
+   * @method favoriteRecipe
+   * @param {Object} recipe
+   */
   favoriteRecipe : function(recipe){
 
     return new Ember.RSVP.Promise((resolve, reject) => {
@@ -106,7 +118,7 @@ export default Ember.Service.extend({
       //     reject(xhr);
       //   });
 
-      recipe.set('favorite', true);
+      recipe.toggleProperty('favorite');
       console.log('Favorite recipe service hook');
       console.log(recipe);
       resolve(recipe);
@@ -114,6 +126,10 @@ export default Ember.Service.extend({
   },
 
 
+  /**
+   * @method saveRecipe
+   * @param {Object} recipe
+   */
   saveRecipe : function(recipe){
 
     return new Ember.RSVP.Promise((resolve, reject) => {
@@ -133,7 +149,7 @@ export default Ember.Service.extend({
       //   (xhr) => {
       //     reject(xhr);
       //   });
-      //
+
       console.log('Save recipe service hook');
       console.log(recipe);
       resolve(recipe);

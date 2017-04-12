@@ -10,13 +10,8 @@ export default Ember.Route.extend({
    */
   model : function(){
 
-    const ingredientSvc = this.get('ingredientSvc');
-    return ingredientSvc.getIngredients().then(
-
-      (ingredients)=>{
-        return {
-          recentIngredients : ingredients
-        };
-      });
+    return {
+      
+    }
   }
 });

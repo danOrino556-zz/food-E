@@ -1,7 +1,7 @@
 <div class="level">
   <a class="level-left" >
 
-    <button class='button' type="button" name="button" {{action 'onBack'}}>
+    <button class='button is-info' type="button" name="button" {{action 'onBack'}}>
       <span class='fa fa-arrow-left recipe-label-icon'></span>
       Back
     </button>
@@ -10,19 +10,23 @@
 
   <div class="level-right">
 
-    {{#unless recipe.favorite}}
-      <button class='button recipe-inline-button' type="button" name="button" {{action 'onFavorite'}}>
-        <span class='fa fa-heart recipe-label-icon'></span>
-        Favorite
-      </button>
-    {{/unless}}
+    <button class='button is-info recipe-inline-button' type="button" name="button" {{action 'onFavorite'}}>
+      <span class='fa {{if recipe.favorite 'fa-heart-o' 'fa-heart'}} recipe-label-icon'></span>
 
-    <button class='button recipe-inline-button' type="button" name="button" {{action 'onAdd'}}>
+      {{#if recipe.favorite}}
+        Unfavorite
+      {{else}}
+        Favorite
+      {{/if}}
+
+    </button>
+
+    <button class='button is-info recipe-inline-button' type="button" name="button" {{action 'onAdd'}}>
       <span class='fa fa-plus-circle recipe-label-icon'></span>
       Save
     </button>
 
-    <button class='button recipe-inline-button' type="button" name="button" {{action 'onOptions'}}>
+    <button class='button is-info recipe-inline-button' type="button" name="button" {{action 'onOptions'}}>
       <span class='fa fa-ellipsis-v recipe-label-icon'></span>
     </button>
 

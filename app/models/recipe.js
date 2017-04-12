@@ -2,7 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
 
-  name: DS.attr('string'),
+  name: DS.attr('string', {defaultValue : ()=>{return 'Super Tasty Noms #' + Math.floor(Math.random() * (100 - 0 + 1)) + 0;}}),
   description: DS.attr('string', {defaultValue : ()=>{return 'Recipe Description'}}),
   directions: DS.attr('string', {defaultValue : ()=>{return 'Recipe Directions'}}),
   imageUrl: DS.attr('string', {defaultValue : ()=>{return 'https://images.pexels.com/photos/106251/pexels-photo-106251.jpeg?h=350&amp;auto=compress&amp;cs=tinysrgb'}}),

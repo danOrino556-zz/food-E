@@ -1,7 +1,8 @@
 
 
-<!--Top Level actions (Back)-->
+<!--Top Level Recipe Actions-->
 {{foode-recipe-info-navbar recipe=model.recipe
+  
                            onBack='onBack'
                            onFavorite='onFavorite'
                            onAdd='onAdd'
@@ -11,10 +12,11 @@
 
 
 <!--Recipe Fields-->
-
 {{foode-recipe-info-header recipe=model.recipe}}
 
 
 <hr>
 
+
+<!--Description / Directions-->
 {{foode-recipe-info-body recipe=model.recipe}}
