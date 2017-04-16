@@ -1,18 +1,18 @@
 
-<div class="notification filter-recipe-tile">
+<div class="notification filter-recipe-tile" {{action 'onEditRecipe' recipe}}>
 
   <p class="title">
-    <strong>Recipe Name</strong>
+    <strong>{{recipe.name}}</strong>
   </p>
 
   <p class="subtitle">
-    {{foode-recipe-stars stars=3}}
+    {{foode-recipe-stars stars=recipe.stars}}
   </p>
 
   <div class="content">
     <figure class="image image is-2by1">
-      <img src='http://www.gablescinema.com/media/filmassets/slides/big_lebowski_13.jpg' alt="Image">
+      <img src={{recipe.imageUrl}} alt="Image">
     </figure>
   </div>
-  
+
 </div>

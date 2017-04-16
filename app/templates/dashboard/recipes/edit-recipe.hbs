@@ -2,7 +2,7 @@
 
 <!--Top Level Recipe Actions-->
 {{foode-recipe-info-navbar recipe=model.recipe
-  
+
                            onBack='onBack'
                            onFavorite='onFavorite'
                            onAdd='onAdd'
@@ -18,5 +18,12 @@
 <hr>
 
 
+<!--Recipe Fields-->
+{{foode-recipe-info-tags recipe=model.recipe}}
+
+
+<hr>
+
+
 <!--Description / Directions-->
-{{foode-recipe-info-body recipe=model.recipe}}
+{{foode-recipe-body-container recipe=model.recipe}}

@@ -12,4 +12,5 @@ export default DS.Model.extend({
   cookTime: DS.attr('number', {defaultValue : ()=>{return Math.floor(Math.random() * (60 - 0 + 1)) + 0;}}),
   prepTime: DS.attr('number', {defaultValue : ()=>{return Math.floor(Math.random() * (60 - 0 + 1)) + 0;}}),
   servings: DS.attr('number', {defaultValue : ()=>{return Math.floor(Math.random() * (10 - 0 + 1)) + 0;}}),
+  tags: DS.attr('number', {defaultValue : ()=>{return ['Italian', 'Dinner'];}}),
 });

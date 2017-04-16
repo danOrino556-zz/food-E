@@ -1,0 +1,33 @@
+
+<div class="columns">
+
+  <div class="column is-one-quarter">
+    <aside class="menu">
+      <ul class="menu-list">
+
+        <li {{action 'onIngredients'}}><a class='{{if showIngredients 'is-active'}}'>Ingredients</a></li>
+        <li {{action 'onInstructions'}}><a class='{{if showInstructions 'is-active'}}'>Instructions</a></li>
+        <li {{action 'onReviews'}}><a class='{{if showReviews 'is-active'}}'>Reviews</a></li>
+
+      </ul>
+    </aside>
+  </div>
+
+  <div class="column">
+
+    {{#liquid-if showIngredients}}
+      {{foode-recipe-body-ingredients recipe=recipe}}
+    {{/liquid-if}}
+
+    {{#liquid-if showInstructions}}
+      {{foode-recipe-body-instructions recipe=recipe}}
+    {{/liquid-if}}
+
+
+    {{#liquid-if showReviews}}
+      {{foode-recipe-body-reviews recipe=recipe}}
+    {{/liquid-if}}
+
+  </div>
+
+</div>

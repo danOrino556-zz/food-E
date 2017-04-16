@@ -3,61 +3,18 @@
 
 <div class="tile is-ancestor">
 
-  <div class="tile is-vertical is-4">
+  <div class="tile is-vertical">
 
     <div class="tile is-parent">
       <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-    </div>
 
-    <div class="tile is-parent">
-      <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-    </div>
+        {{#each recipes as |recipe|}}
+          {{foode-tile-content recipe=recipe onEditRecipe='onEditRecipe'}}
+        {{/each}}
 
-  </div>
-
-  <div class="tile is-vertical is-4">
-
-    <div class="tile is-parent">
-      <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-    </div>
-
-    <div class="tile is-parent">
-      <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-
-      <article class="tile is-child">
-        {{foode-tile-content}}
       </article>
     </div>
 
   </div>
-
-  <div class="tile is-vertical is-4">
-
-    <div class="tile is-parent">
-      <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-
-      <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-    </div>
-
-    <div class="tile is-parent">
-      <article class="tile is-child">
-        {{foode-tile-content}}
-      </article>
-    </div>
-
-  </div>
-
 
 </div>

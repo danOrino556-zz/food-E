@@ -35,7 +35,7 @@ export default Ember.Route.extend({
    * @event afterModel
    */
   afterModel : function(){
-    this.set('navSvc.selectedNavItem', 'meal-planner');
+    this.set('navSvc.selectedNavItem', 'recipes');
   },
 
 

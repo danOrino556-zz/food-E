@@ -27,6 +27,14 @@ export default Ember.Route.extend({
   },
 
 
+  /**
+   * @event deactivate
+   */
+  deactivate : function(){
+    this.set('navSvc.selectedRecipeFilter', null);
+  },
+
+
   actions : {
 
 
@@ -35,6 +43,7 @@ export default Ember.Route.extend({
      * @param  {Object} recipe
      */
     onEditRecipe(recipe){
+      console.log(recipe)
       this.transitionTo('dashboard.recipes.edit-recipe', recipe.get('id'));
     },
 
