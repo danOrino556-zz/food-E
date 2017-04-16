@@ -65,7 +65,7 @@ export default Ember.Route.extend({
           notificationSvc.success(recipe.get('name') + ' has been added to your recipe list');
         },
         ()=>{
-          notificationSvc.success('There was a problem adding ' + recipe.get('name') + ' to your recipe list');
+          notificationSvc.error('There was a problem adding ' + recipe.get('name') + ' to your recipe list');
         }
       );
     },

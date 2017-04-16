@@ -1,61 +1,71 @@
 
-<nav class="nav foode-navbar">
-  <div class="nav-left">
-    {{#link-to 'dashboard.home.landing' class="nav-item is-tab is-hidden-mobile"}}
-      <div class="has-text-cetered">
-        <div class="fa fa-home"></div>
-        <div>Home</div>
-      </div>
-    {{/link-to}}
-    {{#link-to 'dashboard.recipes.landing' class="nav-item is-tab is-hidden-mobile"}}
-      <div class="has-text-archive">
-        <div class="fa fa-home"></div>
-        <div>Recipes</div>
-      </div>
-    {{/link-to}}
-    {{#link-to 'dashboard.ingredients' class="nav-item is-tab is-hidden-mobile"}}
-      <div class="has-text-cetered">
-        <div class="fa fa-file-o"></div>
-        <div>Groceries</div>
-      </div>
-    {{/link-to}}
-    {{#link-to 'dashboard.meal-planner' class="nav-item is-tab is-hidden-mobile"}}
-      <div class="has-text-cetered">
-        <div class="fa fa-calendar"></div>
-        <div>Meal Planner</div>
-      </div>
-    {{/link-to}}
-    {{#link-to 'dashboard.shop' class="nav-item is-tab is-hidden-mobile"}}
-      <div class="has-text-cetered">
-        <div class="fa fa-shopping-basket"></div>
-        <div>Shop</div>
-      </div>
-    {{/link-to}}
-  </div>
+{{#foode-dashboard-nav as |component|}}
 
-  <span class="nav-toggle">
-  </span>
+  <nav class="nav foode-navbar">
+    <div class="nav-left">
 
-  <div class="nav-right nav-menu">
-    {{#link-to 'dashboard.recipes.landing' class="nav-item is-tab is-hidden-tablet"}}Recipes{{/link-to}}
-    {{#link-to 'dashboard.ingredients' class="nav-item is-tab is-hidden-tablet"}}Groceries{{/link-to}}
-    {{#link-to 'dashboard.meal-planner' class="nav-item is-tab is-hidden-tablet"}}MealPlanner{{/link-to}}
-    {{#link-to 'dashboard.shop' class="nav-item is-tab is-hidden-tablet"}}Shop{{/link-to}}
+      {{#link-to 'dashboard.home.landing' class="nav-item is-tab is-hidden-mobile (if (equal component.selected 'home') 'is-active')"}}
+        <div class="has-text-cetered">
+          <div class="fa fa-home"></div>
+          <div>Home</div>
+        </div>
+      {{/link-to}}
 
-    {{#link-to 'dashboard.profile' class="nav-item is-tab"}}
-      <div class="has-text-cetered">
-        <div class="fa fa-user-circle-o"></div>
-        <div>Profile</div>
-      </div>
-    {{/link-to}}
-    <a class="nav-item is-tab" {{action 'logout'}}>
-      <div class="has-text-cetered">
-        <div class="fa fa-home"></div>
-        <div>Log Out</div>
-      </div>
-    </a>
-  </div>
-</nav>
+
+      {{#link-to 'dashboard.recipes.landing' class="nav-item is-tab is-hidden-mobile (if (equal component.selected 'recipes') 'is-active')"}}
+        <div class="has-text-archive">
+          <div class="fa fa-home"></div>
+          <div>Recipes</div>
+        </div>
+      {{/link-to}}
+
+      {{#link-to 'dashboard.ingredients' class="nav-item is-tab is-hidden-mobile (if (equal component.selected 'groceries') 'is-active')"}}
+        <div class="has-text-cetered">
+          <div class="fa fa-file-o"></div>
+          <div>Groceries</div>
+        </div>
+      {{/link-to}}
+
+      {{#link-to 'dashboard.meal-planner' class="nav-item is-tab is-hidden-mobile (if (equal component.selected 'meal-planner') 'is-active')"}}
+        <div class="has-text-cetered">
+          <div class="fa fa-calendar"></div>
+          <div>Meal Planner</div>
+        </div>
+      {{/link-to}}
+
+      {{#link-to 'dashboard.shop' class="nav-item is-tab is-hidden-mobile (if (equal component.selected 'shop') 'is-active')"}}
+        <div class="has-text-cetered">
+          <div class="fa fa-shopping-basket"></div>
+          <div>Shop</div>
+        </div>
+      {{/link-to}}
+    </div>
+
+    <span class="nav-toggle">
+    </span>
+
+    <div class="nav-right nav-menu">
+      {{#link-to 'dashboard.recipes.landing' class="nav-item is-tab is-hidden-tablet"}}Recipes{{/link-to}}
+      {{#link-to 'dashboard.ingredients' class="nav-item is-tab is-hidden-tablet"}}Groceries{{/link-to}}
+      {{#link-to 'dashboard.meal-planner' class="nav-item is-tab is-hidden-tablet"}}MealPlanner{{/link-to}}
+      {{#link-to 'dashboard.shop' class="nav-item is-tab is-hidden-tablet"}}Shop{{/link-to}}
+
+      {{#link-to 'dashboard.profile' class="nav-item is-tab"}}
+        <div class="has-text-cetered">
+          <div class="fa fa-user-circle-o"></div>
+          <div>Profile</div>
+        </div>
+      {{/link-to}}
+      <a class="nav-item is-tab" {{action 'logout'}}>
+        <div class="has-text-cetered">
+          <div class="fa fa-home"></div>
+          <div>Log Out</div>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+{{/foode-dashboard-nav}}
 
 <div class="app-container">
   {{liquid-outlet}}

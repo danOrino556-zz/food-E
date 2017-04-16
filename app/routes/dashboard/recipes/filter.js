@@ -5,6 +5,7 @@ export default Ember.Route.extend({
 
   recipeSvc : Ember.inject.service('recipe'),
   notificationSvc : Ember.inject.service('notification'),
+  navSvc : Ember.inject.service('navigation'),
 
 
   /**
@@ -15,6 +16,8 @@ export default Ember.Route.extend({
 
     const filterType = params.filter_type;
     const recipes = this.store.peekAll('recipe');
+    this.set('navSvc.selectedRecipeFilter', filterType);
+
 
     return {
       filterType : filterType,
